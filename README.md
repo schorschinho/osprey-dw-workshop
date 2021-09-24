@@ -1,28 +1,40 @@
-# pregame-workshop-2021
+# Osprey Practical Demonstration - DW-MRS-Workshop Leiden 2021
 
-This repository contains the material for the pregame of the “Best practices and tools for Diffusion MR Spectroscopy” workshop, taking place at the Lorentz center in Leiden (NL) in September 2021. 
+This repository contains exemplary material and interactive practical exercise notebooks on the use of the FID-A and the Osprey software, as presented in hybrid format at the “Best practices and tools for Diffusion MR Spectroscopy” workshop, taking place at the Lorentz center in Leiden (NL) in September 2021.
 
-The game consists of processing and fitting a simulated dataset (Synthetic-Data), allowing to compare the results to a ground truth, and two real datasets acquired on a human subject at 7T (InVivo-Data): one with a DW-STEAM, one with a DW-sLASER.
+The Osprey software and SPM12 software are distributed under the licenses in the respective folders.
 
-Datasets contain several b-values, and for each b-value, the individual repetitions. Real datasets contain 3 directions per b-value.
-We provide the corresponding LCModel basis sets, but feel free to use your simulation tools. An example of a LCModel control file will be provided too. 
-A fitted experimental macromolecule baseline is included in the LCModel basis set.  
-The parameters of acquisition, the b-values and the files organisation are provided in the readme files of each folder. 
+There is no licensure restriction on the practical exercise notebooks.
 
+## Practical Exercise Notebooks
 
-*Deliverables*:
+The repository should contain all code and data required to execute the following three interactive live script notebooks:
 
- 
-For the Synthetic-Data:
-* a .mat or .csv file  of the residuals that you obtain when computing the difference of your processed spectra at each b-value versus the ground truth at each b-value (before quantification). Please specify if you applied anything else than phase & frequency correction (or if you did not apply it). 
-* a visualisation of the residuals after spectral quantification (i.e. data-fit) for each b-value. Please specify if you simulated your own basis set or if you used the one provided.
-* a .mat or .csv file containing the signal decay for the provided b-values for metabolites that are (in your opinion) trustworthy. 
-* if you are using an existing pipeline, and that you make substantial changes to optimise it, please send the initial and the last results, and write a short note with the changes you made that brought an improvement. 
-any observation you’d like to make.
- 
-For the InVivo-Data, each b-value contains 3 directions, you can average them or treat them independently, just let us know what you decided. Please send us:
-* a .mat or .csv of your processed spectra. Please specify if you applied anything else than phase & frequency correction (or if you did not apply it). 
-* a visualisation of the residuals after spectral quantification (i.e. data-fit). Please specify if you simulated your own basis set or if you used the one provided.
-* a .mat or .csv file containing the signal decay for the provided b-values for metabolites that are (in your opinion) trustworthy.
-* if you are using an existing pipeline, and that you make substantial changes to optimise it, please send the initial and the last results, and write a short note with the changes you made that brought an improvement. 
-* any observation you’d like to make.
+### 01 - FID_A_Sandbox.mlx
+
+A MATLAB live script that introduces the [FID-A toolbox for modular analysis of MRS data](https://github.com/cic-methods/fid-a), explains the basic data storage structure, outlines a simple analysis workflow, and includes a few exercises to explore.
+
+### 02 - Osprey_Walkthrough.mlx
+
+This live script includes an introduction to the setup, structure, and use of the [Osprey software, an automated end-to-end workflow for in-vivo MRS data](https://github.com/schorschinho/osprey). The walkthrough features the execution of all key Osprey modules (Job, Load, Process, Fit, Coregistration, Segmentation, Quantify, GUI).
+
+### 02 - dwMRS_with_Osprey.mlx
+
+This live script shows an example workflow for analyzing diffusion-weighted MRS using Osprey. This showcases the full integration of the [LCModel software](http://s-provencher.com/lcmodel.shtml) into the fitting process, enabling diffusion-weighted MRS users to port some established analysis workflows over to Osprey.
+
+## Additional material
+
+### InVivo-Data, Synthetic-Data
+In-vivo and simulated diffusion-weighted MRS data created by the organizing committee of the workshop, [available on GitHub](https://github.com/dwmrshub/pregame-workshop-2021).
+
+### spm12
+The [SPM12 software](https://github.com/spm/spm12) is created by a large team at University College London (UCL), UK.
+
+### osprey-dwmrs
+Temporary development version of the [Osprey](https://github.com/schorschinho/osprey), specifically hand-crafted for the workshop. This is a work-in-progress - best practices and pipelines agreed on during the workshop will be incorporated into future main release versions.
+
+### osprey-develop
+Copy of the latest 'develop' branch (as of Sept 22 2021) of the [Osprey](https://github.com/schorschinho/osprey). Please follow the main Osprey repository for frequent updates and new releases.
+
+### README.MD
+This file.
