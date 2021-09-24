@@ -31,10 +31,10 @@ In-vivo and simulated diffusion-weighted MRS data created by the organizing comm
 The [SPM12 software](https://github.com/spm/spm12) is created by a large team at University College London (UCL), UK.
 
 ### osprey-dwmrs
-Temporary development version of the [Osprey](https://github.com/schorschinho/osprey), specifically hand-crafted for the workshop. This is a work-in-progress - best practices and pipelines agreed on during the workshop will be incorporated into future main release versions.
+Temporary development version of the [Osprey software](https://github.com/schorschinho/osprey), specifically hand-crafted for the workshop. This is a work-in-progress - best practices and pipelines agreed on during the workshop will be incorporated into future main release versions.
 
 ### osprey-develop
-Copy of the latest 'develop' branch (as of Sept 22 2021) of the [Osprey](https://github.com/schorschinho/osprey). Please follow the main Osprey repository for frequent updates and new releases.
+Copy of the latest 'develop' branch (as of Sept 22 2021) of the [Osprey software](https://github.com/schorschinho/osprey). Please follow the main Osprey repository for frequent updates and new releases.
 
 ### README.MD
 This file.
